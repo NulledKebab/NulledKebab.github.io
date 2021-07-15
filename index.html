@@ -1,71 +1,107 @@
-
-<html>
+    <!--All Credits for the idea of the website and for the Random quote Fix go to George Tsatsis https://gitlab.com/gtsatsis -->
+<html style="background-color: black;">
 <body>
     <style>
         @font-face { font-family: Modenine; src: url('./asseets/Modenine-2OPd.ttf'); } 
     </style>
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="asseets/style.css" />
 <div class="main">
 
 
-<p></p>
 
 </body>
-<div class="woman"><img src="asseets/woman.gif"width="150px"length="150px" ></div>
+<img class="woman"src="asseets/woman.gif"width="150px"length="150px" >
 <h1 >George Floridis</h1>
-<div class="sptf"><img src="asseets/OIP.jfif" width="50px"length="50px"></div>
-<div class="twt"><img src="asseets/twitter-logo-white-png-1-original.png"width="40px"length="40px"></div>
+<p>A fattass 16 Year old trying to become a developer and code a discord bot.
+</p>
 
-<div class="gthb"><img src="asseets/blob.jfif"width="40px"length="40px"></div>
-
+<div class="socials-links">
+  <div class="socials-container">
+      <a href="https://open.spotify.com/user/baoxyman?si=efa20067d5e44a18" name="Spotify" title="spotify"  target="_blank" rel="noopener noreferrer">
+          <figure class="icon">
+              <img src="asseets/OIP.jfif"  />
+          </figure>
+      </a>
+      <a href="https://github.com/nulledkebab" name="github" target="_blank" title="Github"  rel="noopener noreferrer">
+          <figure class="icon1">
+              <img src="asseets/blob.jfif" class="gthb"  />
+          </figure>
+      </a>
+      <a href="https://twitter.com/DepressedKebab" name="Twitter"title="Twitter"  target="_blank" rel="noopener noreferrer">
+        <figure class="icon1">
+            <img src="asseets/twitter-logo-white-png-1-original.png" class="twt"  />
+        </figure>
+    </a>
+    <a href="" name="Email" title="Email Login (Soon)" target="_blank" rel="noopener noreferrer">
+      <figure class="icon21">
+          <img src="asseets/R.png" class="email" "  />
+      </figure>
+  </a>
+  </div>
+</div>
+<audio   src="asseets/music.mp3"id="sum_light_jazz" autoplay loop></audio>
       <figure class="quote">
         <p id=random></p>
      
         <figcaption>
-          Quote of the Day <span id="label-span"><a id="source-label" class="source-label" target="_blank"></a></span>
+          Quote of the Day  
         </figcaption>
+        <span id="label-span"><a id="source-label" class="source-label" target="_blank"></a></span>
       </figure>
     </section>
+    <div class="hidden-if-no-js" id="musicPlayer-Container">
+      <section class="player">
+          <div class="cover-container">
+              <img class="player-cover" id="cover" src="img/cover-generic.png" alt="album cover">
+          </div>
+          <div class="player-info">
+              <div class="player-label header-label">Now Playing</div>
+              <div class="player-label title-label" id="title">Song Name</div>
+              <div class="player-label artist-label" id="artist">Artist Name</div>
+              <div class="player-label album-label" id="album">Album Name</div>
+          </div>
+      </section>
+  </div>
 </div>
+</div>
+    <!-- music status ("now playing") all credits go to carsuki-->
 
 <script  language = "javascript"   type = "text/javascript ">
 // randomquote.js
-// with help from the Man
-// carsuki '20
-
-// gif list
+//all credits go to George Tsatsis for the help! https://gitlab.com/gtsatsis
+// quote list
 const randomquotes = [
    
     {
       
-      quote: "i do cocaine1",
+      quote: "'Maybe because of the conversion rates in Australia, Tupac became only one pack.'",
       
     },
     {
 
-      quote: "i do cocaine2",
+      quote: "'if it aint broke, Dont fix it'",
 
     },
     {
 
-      quote: "i do cocaine3",
+      quote: "'it aint a bug if they dont find it'",
 
     },
     {
 
-      quote: "i do cocaine4",
+      quote: "'its a feature, Not a bug'",
 
     },
     {
 
-      quote: "i do cocaine5",
+      quote: "her pussy has become the subway the way people always in it ",
 
     },
     {
 
-      quote: "i do cocainef",
+      quote: "your face makes onions cry",
 
     }
 ];
@@ -83,6 +119,24 @@ document.getElementsByClassName("source-label")[0].innerHTML = randomset.quote;
 
 
 
+</script>
+<script  language = "javascript"   type = "text/javascript ">
+async function getData() {
+  // Thanks to carsuki for the code here.
+  const req = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=nulledkebab&api_key=7124741547c48bfddefca4026cd7849a&limit=1&nowplaying=true&format=json');
+  const { recenttracks } = await req.json();
+
+  document.getElementById("title").innerHTML = recenttracks["track"][0]["name"];
+  document.getElementById("artist").textContent = recenttracks["track"][0]["artist"]["#text"];
+  document.getElementById("album").textContent = recenttracks["track"][0]["album"]["#text"];
+  document.getElementById("cover").src = recenttracks["track"][0]["image"][2]["#text"];
+
+  document.getElementById('musicPlayer-Container').style.display = "block";
+}
+getData();</script>
+<script>
+  var audio = document.getElementById("sum_light_jazz");
+  audio.volume = 0.3;
 </script>
 </div>
 </html>

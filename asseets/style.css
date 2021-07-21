@@ -1,7 +1,9 @@
 body {
     font-family: "Modenine", monospace;
+    background-image: url(./bg.png);
+    background-size: cover;
     color: #fff;
-    background-color: #000000;
+
 }
 
 .main {
@@ -15,7 +17,11 @@ body {
     border-radius: 10px;
     border-color: #fff;
 }
+h1{
+    font-family: "Neutro", monospace;
+    font-size: larger;
 
+  }
 .woman {
     width: 30%;
     height: auto;
@@ -34,6 +40,8 @@ h1 {
 }
 p{
     text-align: center;
+    font-family: "Neutro", monospace;
+    font-size: smaller;
  
 }
 .hidden-if-no-js {
@@ -83,7 +91,8 @@ p{
 }
   
 .player-label {
-    font-family: 'PT Mono', monospace;
+    font-family: "Neutro", monospace;
+
     color: #fff;
     display: inline-block;
     white-space: nowrap;
@@ -92,22 +101,26 @@ p{
 }
 
 .header-label {
-    font-family: 'PT Mono', monospace;
-    font-size: 13px;
+    font-family: "Neutro", monospace;
+    font-size: 10px;
     height: 16px;
     line-height: 16px;
-    opacity: 0.6;
+    opacity: 1;
     padding-bottom: 8px;
   }
   
 .title-label {
-    font-size: 20px;
+    font-family: "Neutro", monospace;
+
+    font-size: 15px;
     height: 20px;
     line-height: 20px;
 }
   
 .artist-label {
-    font-size: 20px;
+    font-family: "Neutro", monospace;
+
+    font-size: 15px;
     height: 20px;
     line-height: 20px;
     padding-top: 4px;
@@ -115,15 +128,20 @@ p{
 }
   
 .album-label {
-    font-family: 'PT Mono', monospace;
-    font-size: 13px;
+    font-family: "Neutro", monospace;
+
+    font-size: 10px;
     height: 16px;
     line-height: 16px;
 }
 .source-label{
+    font-family: "Neutro", monospace;
+    font-size: small;
     margin-top: 500px;
 }
 figcaption{
+    font-family: "Neutro", monospace;
+    font-size: small;
     margin-bottom: 20px;
 }
 
@@ -136,14 +154,21 @@ figcaption{
 
 .icon,
 .icon img {
-    width: 65px;
+    width: 50px;
     height: 50px;
     text-decoration: none;
 }
-
-.icon1 img {
+.icon12 img {
     width: 50px;
     height: 50px;
+    text-decoration: none;
+}
+.icon1 img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    bottom: 5px;
     text-decoration: none;
 }
 
@@ -154,12 +179,19 @@ figcaption{
     margin-bottom: 0;
 }
 .icon1 {
+
     margin-left: 5px;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0px;
 }
+.icon12 {
 
+    margin-left: 5px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
 audio::-webkit-media-controls-panel{
     background-color:black;
 }

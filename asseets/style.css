@@ -1,9 +1,9 @@
 body {
     font-family: "Modenine", monospace;
-    background-image: url(./bg.png);
     background-size: cover;
+    background-image: url(./background.jpg);
     color: #fff;
-
+    background-color: #141316;
 }
 
 .main {
@@ -15,11 +15,10 @@ body {
     margin-bottom: 36px;
     border: 4px solid;
     border-radius: 10px;
-    border-color: #fff;
+    border-color: rgb(255, 255, 255);
 }
 h1{
-    font-family: "Neutro", monospace;
-    font-size: larger;
+    font-family: "Modenine", monospace;
 
   }
 .woman {
@@ -40,8 +39,7 @@ h1 {
 }
 p{
     text-align: center;
-    font-family: "Neutro", monospace;
-    font-size: smaller;
+    font-family: "Modenine", monospace;
  
 }
 .hidden-if-no-js {
@@ -91,7 +89,7 @@ p{
 }
   
 .player-label {
-    font-family: "Neutro", monospace;
+    font-family: "Modenine", monospace;
 
     color: #fff;
     display: inline-block;
@@ -101,7 +99,7 @@ p{
 }
 
 .header-label {
-    font-family: "Neutro", monospace;
+    font-family: "Modenine", monospace;
     font-size: 10px;
     height: 16px;
     line-height: 16px;
@@ -110,7 +108,7 @@ p{
   }
   
 .title-label {
-    font-family: "Neutro", monospace;
+    font-family: "Modenine", monospace;
 
     font-size: 15px;
     height: 20px;
@@ -118,7 +116,7 @@ p{
 }
   
 .artist-label {
-    font-family: "Neutro", monospace;
+    font-family: "Modenine", monospace;
 
     font-size: 15px;
     height: 20px;
@@ -128,20 +126,18 @@ p{
 }
   
 .album-label {
-    font-family: "Neutro", monospace;
+    font-family: "Modenine", monospace;
 
     font-size: 10px;
     height: 16px;
     line-height: 16px;
 }
 .source-label{
-    font-family: "Neutro", monospace;
-    font-size: small;
+    font-family: "Modenine", monospace;
     margin-top: 500px;
 }
 figcaption{
-    font-family: "Neutro", monospace;
-    font-size: small;
+    font-family: "Modenine", monospace;
     margin-bottom: 20px;
 }
 
@@ -176,6 +172,21 @@ figcaption{
     margin-left: 5px;
     margin-right: 0;
     margin-top: 0;
+    margin-bottom: 0;
+}
+.icon3 img {
+    width: 50px;
+    height: 40px;
+    position: relative;
+
+    bottom: 10px;
+    text-decoration: none;
+}
+
+.icon3 {
+    margin-left: 5px;
+    margin-right: 0;
+    margin-top: 3px;
     margin-bottom: 0;
 }
 .icon1 {

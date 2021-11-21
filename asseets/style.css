@@ -1,12 +1,17 @@
 body {
     font-family: "Modenine", monospace;
     background-size: cover;
-    background-image: url(./background.jpg);
-    color: #fff;
+
+    
     background-color: #141316;
 }
+body{background-image: url(./background.jpg);transition:background 1s ease 0s;color: #fff;}
+button{background:rgba(255,255,255,0.3);border-radius:10px;border:1px solid #FFF;padding:10px;color:#ffffff;cursor:pointer;font-weight:bold;margin:25px;box-shadow:2px 2px 2px rgba(0,0,0,0.3);text-shadow:1px 1px 1px rgba(0,0,0,0.3)}
+.second-image{background-image: url(./background2.jpg) !important;color: #000000; }
 
-.main {
+
+
+.main{
     width: 90%;
     max-width: 500px;
     margin-top: 36px;
@@ -15,7 +20,18 @@ body {
     margin-bottom: 36px;
     border: 4px solid;
     border-radius: 10px;
-    border-color: rgb(255, 255, 255);
+    border-color: #ffffff;
+}
+.main1{
+    width: 90%;
+    max-width: 500px;
+    margin-top: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+    border: 4px solid;
+    border-radius: 10px; 
+    border-color: #000000 !important;
 }
 h1{
     font-family: "Modenine", monospace;
@@ -91,7 +107,7 @@ p{
 .player-label {
     font-family: "Modenine", monospace;
 
-    color: #fff;
+  
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -143,21 +159,34 @@ figcaption{
 
 .socials-container {
     text-align: center;
+    
+    -webkit-filter: invert(1);
+    filter: invert(0);
+
+}
+.socials-container1 {
+    -webkit-filter: invert(1);
+    filter: invert(1) !important;
+
 }
 .socials-container a {
     display: inline-block;
 }
 
 .icon,
+
 .icon img {
     width: 50px;
     height: 50px;
     text-decoration: none;
+
 }
+
 .icon12 img {
     width: 50px;
     height: 50px;
     text-decoration: none;
+
 }
 .icon1 img {
     width: 40px;
